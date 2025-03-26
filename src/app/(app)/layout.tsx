@@ -2,6 +2,7 @@ import {Montserrat} from "next/font/google";
 import "@/app/core/globals.css";
 
 import type { Metadata } from "next";
+import type { IProps } from "@/app/core/index.d";
 
 export const metadata: Metadata = {
     title: "Grana",
@@ -15,9 +16,7 @@ const montserrat = Montserrat({
 
 export default function RootLayout({
     children,
-}: Readonly<{
-    children: React.ReactNode;
-}>) {
+}: IProps) {
     return (
         <html lang="pt-BR" className={montserrat.className}>
             <body>
