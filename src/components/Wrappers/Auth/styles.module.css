@@ -1,0 +1,76 @@
+.container {
+    display: flex;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.hero {
+    position: relative;
+    max-height: 100%;
+    width: 40%;
+}
+
+.logo {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    top: 40px;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 100px 24px;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.content h1 {
+    margin-bottom: 16px;
+}
+
+.content h4 {
+    font-weight: 400;
+}
+
+.content form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 80px;
+}
+
+.link-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.link-wrapper a {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.link-wrapper a:hover {
+    color: var(--primary-hover);
+}
+
+.error {
+    color: var(--semantic-error);
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        display: none;
+    }
+}
