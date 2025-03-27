@@ -31,6 +31,11 @@ function Form() {
             return;
         }
 
+        if (error?.status === 422 && error?.code === 'user_already_exists') {
+            setError('Já existe um usuário cadastrado com esse e-mail');
+            return;
+        }
+
         if (error !== null) {
             setError('Ocorreu um erro, tente novamente mais tarde');
             return;
