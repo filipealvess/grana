@@ -26,19 +26,20 @@ function Form() {
             password,
         });
 
-        setIsCreating(false);
-
         if (error?.status === 422 && error?.code === 'weak_password') {
+            setIsCreating(false);
             setError('A senha deve ter no mínimo 6 caracteres');
             return;
         }
 
         if (error?.status === 422 && error?.code === 'user_already_exists') {
+            setIsCreating(false);
             setError('Já existe um usuário cadastrado com esse e-mail');
             return;
         }
 
         if (error !== null) {
+            setIsCreating(false);
             setError('Ocorreu um erro, tente novamente mais tarde');
             return;
         }

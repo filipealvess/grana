@@ -26,14 +26,14 @@ function Form() {
             password,
         });
 
-        setIsLoading(false);
-
         if (error?.status === 400 && error?.code === 'invalid_credentials') {
+            setIsLoading(false);
             setError('E-mail e/ou senha incorretos');
             return;
         }
 
         if (error !== null) {
+            setIsLoading(false);
             setError('Ocorreu um erro, tente novamente mais tarde');
             return;
         }
