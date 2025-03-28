@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import supabase from "@/services/supabase";
+import {createClient} from "@/services/supabase/client";
 import styles from '@/components/Wrappers/Auth/styles.module.css';
 
 function Form() {
@@ -18,6 +18,8 @@ function Form() {
 
         setIsCreating(true);
         setError(null);
+
+        const supabase = createClient();
 
         const {error} = await supabase.auth.signUp({
             email,
