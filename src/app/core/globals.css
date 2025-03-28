@@ -13,7 +13,7 @@
     box-sizing: border-box;
 }
 
-input, button, a {
+input, button, button *, a {
     transition: all 0.3s;
 }
 
@@ -31,11 +31,16 @@ h4, h4 * {
 
 button {
     height: 40px;
+    padding: 0 16px;
     border-radius: 8px;
     background-color: var(--primary);
     color: var(--background-page);
     font-weight: 600;
     cursor: pointer;
+}
+
+button > span {
+    font-weight: 600;
 }
 
 button:hover:not(:disabled) {
@@ -45,6 +50,27 @@ button:hover:not(:disabled) {
 button:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+}
+
+button[data-type="tertiary"] {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    color: var(--primary);
+}
+
+button[data-type="tertiary"] * {
+    color: var(--primary);
+}
+
+button:hover[data-type="tertiary"]:not(:disabled) {
+    background-color: var(--primary-10rgba);
+    color: var(--primary-hover);
+}
+
+button:hover[data-type="tertiary"]:not(:disabled) * {
+    color: var(--primary-hover);
 }
 
 input {
