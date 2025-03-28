@@ -70,11 +70,15 @@ html {
     --primary: #F0A202;
     --primary-hover: #FDBE40;
     --primary-50rgba: rgba(240, 162, 2, 0.5);
+    --primary-25rgba: rgba(240, 162, 2, 0.25);
+    --primary-10rgba: rgba(240, 162, 2, 0.1);
 
     --background-page: #121212;
     --background-section: #1D1D1D;
+    --background-menu: #060606;
 
     --text-highlight: #F2F2F2;
+    --text-secondary: #A1A1A1;
 
     --semantic-error: #CF6679;
 }
