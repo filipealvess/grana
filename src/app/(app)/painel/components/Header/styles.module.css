@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+/* MOBILE (G) */
+@media (max-width: 425px) {
+    .visibility-button:hover {
+        background-color: transparent !important;
+    }
+
+    .visibility-button span {
+        display: none;
+    }
+}
