@@ -18,6 +18,7 @@ function Auth({children}: IProps) {
                 <Image
                     alt="Muda de planta dentro de uma nota 50 euros"
                     className={styles.background}
+                    priority
                     src={money}
                 />
             </section>
